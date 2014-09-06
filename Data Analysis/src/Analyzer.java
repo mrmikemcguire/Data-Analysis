@@ -3,6 +3,7 @@ import java.util.ArrayList;
 public class Analyzer
 	{
 	private static int qqqCount = 0;
+	private static int gCodeCounter = 0;
 	private static int length6Count = 0;
 	
 	public static void main(String[] args)
@@ -10,6 +11,7 @@ public class Analyzer
 		Data.addData();
 		countRecords();
 		findQQQs();
+		countLettercodesStartingWithG();
 		countLength6Lettercodes();
 		}
 	
@@ -38,6 +40,19 @@ public class Analyzer
 					length6Count++;
 				}
 			System.out.println("There are " + length6Count + " lettercodes of length six.");
+			}
+		
+		public static void countLettercodesStartingWithG()
+			{
+			for (Record r : Data.data)
+				{
+				if (r.getLetterCode().substring(0,1).equals("g"))
+					gCodeCounter++;
+				}
+			double gStartPercentage = (double) gCodeCounter / (double) Data.data.size() * 100;
+			System.out.println("There are " + gCodeCounter +
+					" records beginning with the letter \"g\".");
+			System.out.println("That is " + gStartPercentage + "% of the records.");
 			}
 	}
 
