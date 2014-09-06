@@ -18,6 +18,7 @@ public class Analyzer
 		public static void countRecords()
 			{
 			System.out.println("There are " + Data.data.size() + " records in the database.");
+			System.out.println();
 			}	
 		
 		public static void findQQQs()
@@ -30,16 +31,7 @@ public class Analyzer
 					}
 				}
 			System.out.println("There are " + qqqCount + " occurances of \"qqq\" in the data.");
-			}
-		
-		public static void countLength6Lettercodes()
-			{
-			for (int i = 0; i < Data.data.size(); i++)
-				{
-				if (Data.data.get(i).getLetterCode().length() == 6)
-					length6Count++;
-				}
-			System.out.println("There are " + length6Count + " lettercodes of length six.");
+			System.out.println();
 			}
 		
 		public static void countLettercodesStartingWithG()
@@ -53,6 +45,17 @@ public class Analyzer
 			System.out.println("There are " + gCodeCounter +
 					" records beginning with the letter \"g\".");
 			System.out.println("That is " + gStartPercentage + "% of the records.");
+			System.out.println();
+			}
+		
+		public static void countLength6Lettercodes()
+			{
+			for (int i = 0; i < Data.data.size(); i++)
+				{
+				if (Data.data.get(i).getLetterCode().length() == 6)
+					length6Count++;
+				}
+			System.out.println("There are " + length6Count + " lettercodes of length six.");
 			}
 	}
 

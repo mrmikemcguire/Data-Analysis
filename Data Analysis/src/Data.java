@@ -126,6 +126,5 @@ public class Data
 		data.add(new Record("qgqgqq" , 177717177));
 		data.add(new Record("qgqgqq" , 711717177));
 		data.add(new Record("qgqggqq", 177711177));
-
 		}
 	}
